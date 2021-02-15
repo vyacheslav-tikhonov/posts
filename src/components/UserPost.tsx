@@ -8,44 +8,72 @@ interface Props {
   width?: number;
 }
 
-const User = styled.div`
+const UserContainer = styled.div`
   display: flex;
-  color: gray;
   justify-content: space-between;
-  padding: 5px 0;
-  font-family: Monserat, sans-serif;
+`
+
+const UserName = styled.div`
   font-size: 18px;
+  color: #505056;
+`
+
+const UserNickname = styled.div`
+  font-size: 18px;
+  color: #0057FF;
 `
 
 const Title = styled.div`
   font-weight: bold;
-  font-size: 16px;
-  padding-top: 10px;
+  font-size: 12px;
+  padding-top: 8px;
+  color: #505056;
 `
 
 const Body = styled.div`
-  padding: 20px 0;
+  font-size: 12px;
 `
 
 const Container = styled.div`
   max-width: 500px;
-  min-width: 200px;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 2px #c6c6c6;
+  min-width: 300px;
+  padding: 16px;
+  border-radius: 5px;
+  background: #fcfcfc;
+  box-sizing: border-box;
+`
+
+const DividerContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 17px;
+`
+
+const Divider = styled.div`
+  height: 1px;
+  background: #0057FF;
+  width: 24px;
 `
 
 
 export default function UserPost(props: Props) {
 
   return <Container>
-          <User>
-            <div>{props.name}</div>
-            <div>@{props.username}</div>
-          </User>
+          <UserContainer>
+            <UserName>
+              {props.name.toUpperCase()}
+            </UserName>
+            <UserNickname>
+              @{props.username}
+            </UserNickname>
+          </UserContainer>
           <Title>
-            {props.title}
+            {props.title.toUpperCase()}
           </Title>
+          <DividerContainer>
+            <Divider />
+          </DividerContainer>
           <Body>
             <div>{props.body}</div>
           </Body>
