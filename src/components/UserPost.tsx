@@ -28,7 +28,8 @@ const Body = styled.div`
 `
 
 const Container = styled.div`
-  width: 500px;
+  max-width: 500px;
+  min-width: 200px;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 1px 1px 2px #c6c6c6;

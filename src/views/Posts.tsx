@@ -14,14 +14,7 @@ const PostsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
-
-const InputContainer = styled.div`
-  padding: 10px;
-`
-
-const PostContainer = styled.div`
-  margin-bottom: 10px;
+  gap: 10px;
 `
 
 export default function HomeView() {
@@ -69,16 +62,13 @@ export default function HomeView() {
       const user = users[post.userId];
       if (user) {
         postsComponents.push(
-          <PostContainer
+          <UserPost
             key={post.id}
-          >
-            <UserPost
-              name={user.name}
-              username={user.username}
-              title={post.title}
-              body={post.body}
-            />
-          </PostContainer>
+            name={user.name}
+            username={user.username}
+            title={post.title}
+            body={post.body}
+          />
         )
       }
     }
@@ -99,13 +89,11 @@ export default function HomeView() {
 
   return (
     <PostsContainer>
-      <InputContainer>
-        <TextInput
-          onChange={setSearchQuery}
-          value={searchQuery}
-          placeholder="Search"
-        />
-      </InputContainer>
+      <TextInput
+        onChange={setSearchQuery}
+        value={searchQuery}
+        placeholder="Search"
+      />
       { renderPosts() }
     </PostsContainer>
   )
