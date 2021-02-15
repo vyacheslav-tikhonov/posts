@@ -18,9 +18,7 @@ const InputStyle = styled.input`
 `
 
 const InputContainer = styled.div`
-  width: 500px;
-  min-width: 300px;
-  max-width: 500px;
+  width: 100%;
   border-radius: 5px;
   border: 1px solid #A4A4A8;
   box-sizing: border-box;

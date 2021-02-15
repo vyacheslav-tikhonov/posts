@@ -56,6 +56,10 @@ const Divider = styled.div`
   width: 24px;
 `
 
+const InputContainer = styled.div`
+  min-width: 300px;
+  max-width: 500px;
+`
 
 export default function UserPost(props: Props) {
 
