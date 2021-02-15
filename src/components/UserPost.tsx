@@ -11,15 +11,18 @@ interface Props {
 const UserContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  font-size: 10px;
+  line-height: 12px;
+  @media (min-width: 500px) {
+    font-size: 12px;
+  }
 `
 
 const UserName = styled.div`
-  font-size: 18px;
   color: #505056;
 `
 
 const UserNickname = styled.div`
-  font-size: 18px;
   color: #0057FF;
 `
 
@@ -28,10 +31,19 @@ const Title = styled.div`
   font-size: 12px;
   padding-top: 8px;
   color: #505056;
+  @media (min-width: 500px) {
+    font-size: 14px;
+    padding-top: 10px;
+  }
 `
 
 const Body = styled.div`
   font-size: 12px;
+  line-height: 12px;
+  color: #505056;
+  @media (min-width: 500px) {
+    font-size: 14px;
+  }
 `
 
 const Container = styled.div`
@@ -48,17 +60,15 @@ const DividerContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 17px;
+  @media (min-width: 500px) {
+    font-size: 21px;
+  }
 `
 
 const Divider = styled.div`
   height: 1px;
   background: #0057FF;
   width: 24px;
-`
-
-const InputContainer = styled.div`
-  min-width: 300px;
-  max-width: 500px;
 `
 
 export default function UserPost(props: Props) {
